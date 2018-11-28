@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Katalog</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      div.gallery {
+          margin: 5px;
+          border: 1px solid #ccc;
+          float: left;
+          width: 180px;
+      }
+
+      div.gallery:hover {
+          border: 1px solid #777;
+      }
+      .hid{
+        display: none;
+      }
+      div.gallery img {
+          width: 100%;
+          height: auto;
+      }
+
+      div.desc {
+          padding: 15px;
+          text-align: center;
+      }
+      .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+        }
+
+        .button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
+
+        .button-warning {
+            background: rgb(223, 117, 20); /* this is an orange */
+        }
+
+        .button-secondary {
+            background: rgb(66, 184, 221); /* this is a light blue */
+        }
+    </style>
+    <script>
+      function change(el){
+        if (el == 'bolgarki'){
+          $('.bolgarki').removeClass('hid');
+          $('.dreli').addClass('hid');
+        }else if (el == 'dreli'){
+          $('.dreli').removeClass('hid');
+          $('.bolgarki').addClass('hid');
+        }
+      }
+    </script
+  </head>
+  <body bgcolor="pink">
+    <center><p><h1>Электро инструменты</p></h1></center>
+
+    <ul>
+      <li > <button class="button-secondary" onclick="change('bolgarki')">Болгарки</button></li>
+      <li > <button class="button-success" onclick="change('dreli')">Дрели</button></li>
+      <li> <button class="button-error" onclick="change('kompresori')">Компрессоры</button></li>
+      <li> <button class="button-warning" onclick="change('shlangi')">Шланги</button></li>
+      <li><button class="button-secondary" onclick="change('shurupovert')">Шуруповерты</button></li>
+      <li><button onclick="change('vetrodui')">Ветродуи</button></li>
+    </ul>
+
+
+    <div class="gallery bolgarki hid">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="ruchnoj-elektroinstrument.jpg" alt="5Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+    <div class="gallery dreli hid">
+          <a target="_blank" href="img_5terre.jpg">
+            <img src="1485756306_522553109584925.jpg" alt="5Terre" width="600" height="400">
+          </a>
+          <div class="desc">Add a description of the image here</div>
+    </div>
+    <div class="gallery kompre">
+      <a target="_blank" href="img_lights.jpg">
+        <img src="f9590b9b000c626a57ea2c3a8abb7376.jpg" alt="Northern Lights" width="600" height="400">
+      </a>
+      <div class="desc">Add a description of the image here</div>
+    </div>
+
+  </body>
+</html>
